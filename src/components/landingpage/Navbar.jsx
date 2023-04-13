@@ -12,21 +12,22 @@ const Navbar = () => {
       <img src={logo} alt="findme" className="w-[300px] h-[70px]" />
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
-          <li
-            key={nav.id}
-            className={`font-poppins 
-            font-normal cursor-pointer text-
-            [16px] ${
-              active === nav.title ? "text-white" : "text-dimWhite"
-            } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
-            onClick={() => setActive(nav.title)}
-          >
-            {nav.id === "Seconnecter" ? (
-              <Link to="/auth/Signin">{nav.title}</Link>
-            ) : (
-              <a href={`#${nav.id}`}>{nav.title}</a>
-            )}
-          </li>
+         <li
+         key={nav.id}
+         className={`font-poppins 
+         font-normal cursor-pointer text-
+         [16px] ${
+           active === nav.title ? "text-white" : "text-dimWhite"
+         } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
+         onClick={() => setActive(nav.title)}
+       >
+         {nav.id === "Se-connecter" ? (
+           <Link to="/auth/Signin">{nav.title}</Link>
+         ) : (
+           <a href={`#${nav.id}`}>{nav.title}</a>
+         )}
+       </li>
+       
         ))}
       </ul>
     </nav>
